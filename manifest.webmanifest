@@ -1,0 +1,10 @@
+{
+  "name": "Muazzin Ka Kaam",
+  "short_name": "Muazzin",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#116d4d",
+  "description": "Muazzin Ka Kaam - Namaz Timetable",
+  "icons": []
+}
