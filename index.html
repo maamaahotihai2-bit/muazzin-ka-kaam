@@ -395,6 +395,7 @@ input[type=time]::-webkit-datetime-edit-text{padding:0!important;}
 .dark .extra-tools-card{background:#111827;border-color:#4b5563}.dark .extra-tools-card>div{background:#172b24;border-color:#2f6b51}.dark .live-clock-box #liveDate,.dark .next-prayer-box #livePrayerNote{color:#d1d5db}
 @media(max-width:600px){.extra-tools-card{grid-template-columns:1fr 1fr;gap:7px;padding:7px}.extra-tools-card>div{padding:7px 5px}.live-clock-box #liveClock{font-size:21px}.next-prayer-box #livePrayerName{font-size:17px}.next-prayer-box #livePrayerTime{font-size:18px}.share-page-btn{grid-column:1/-1;width:100%;height:38px;padding:5px}}
 </style>
+<link rel="manifest" href="manifest.webmanifest">
 </head><body><div id="pageTop"></div><div class="tools search-tools">
 <div class="searchbox"><span>🔎</span><input id="searchBox" type="search" placeholder="जैसे: 10 Isha / 15 Asr / 10 Zaval" oninput="filterTable()"><button class="clearBtn" onclick="clearSearch()">Clear</button></div><div class="quick-prayer-search" aria-label="Quick prayer time search">
 <span class="quick-label">🔎 सीधा खोजें:</span>
@@ -976,6 +977,11 @@ window.addEventListener('load',render);
   function bind(){var s=document.getElementById('v67Sound');if(s){s.value=getSound();s.addEventListener('change',function(){setSound(this.value);});}hijri();setSound(getSound());}
   window.addEventListener('load',function(){bind();setInterval(hijri,60000);});
 })();
+</script>
+<script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("./service-worker.js");
+}
 </script>
 </body></html>
 <style id="v48-month-arrow-fix">
